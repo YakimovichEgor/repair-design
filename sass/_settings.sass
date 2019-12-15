@@ -5,18 +5,28 @@ html
 body
   font-family: 'Futura Book', sans-serif
   font-size: 1rem
-  .section
-    &-title
-      text-align: center
-      text-transform: uppercase
+img
+  max-width: 100%
+.section
+  padding: 60px 0
+  &-title
+    text-align: center
+    &__heading
       font-family: 'Yeseva One', cursive
-      &__image
-        display: flex
-        justify-content: center
-        align-items: center
-        &::before, &::after
-          content: ''
-          width: 32px
-          height: 2px
-          background-color: $primary
-          margin: 0 10px
+      text-transform: uppercase
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &::before, &::after
+        content: ''
+        width: 32px
+        height: 2px
+        background-color: $primary
+        margin: 0 10px
+    &__description
+      margin: auto
+      margin-top: 1.24rem
+      font-size: 1.43rem
+      line-height: 135.84%
+      max-width: 53rem
