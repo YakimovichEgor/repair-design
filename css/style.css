@@ -579,12 +579,17 @@ img {
   text-transform: uppercase;
   color: #fff;
   background-color: #E3B873;
-  padding: 1.214rem 2.6rem; }
+  padding: 1.214rem;
+  text-align: center;
+  width: 16.285rem;
+  height: 3.857rem; }
 
 .design__section-title {
   margin-bottom: 2.78rem; }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -597,6 +602,9 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(19, 19, 19, 0.6); }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
