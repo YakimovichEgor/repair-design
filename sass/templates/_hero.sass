@@ -16,6 +16,15 @@
     background-color: rgba($dark, 0.7)
     top: 0
     left: 0
+  &::after
+    content: ''
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 3.46rem
+    background-color: $dark
   &__content
     position: relative
     max-width: 47.85rem
@@ -45,6 +54,7 @@
     text-transform: uppercase
     text-decoration: none
     color: $light
+    z-index: 3
     &:after
       content: ''
       background: url("../img/down-arrow.png") no-repeat center

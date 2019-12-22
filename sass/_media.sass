@@ -13,7 +13,14 @@
       display: none
     &__content
       margin-left: 0
-@media screen and (max-width: 760px)
+@media screen and (max-width: 855px)
+  .section
+    &-title
+      &__text
+        font-size: 1.28rem
+        line-height: 2.07rem
+        max-width: 24.57rem
+@media screen and (max-width: 761px)
   .row
     flex-direction: column
     align-items: center
@@ -29,11 +36,37 @@
       color: $light
     &__card
       margin-bottom: 5.7rem
+  .swiper
+    &-slider
+      &-image
+        margin-top: 0rem
+  .mobile-order-top
+    order: -1
+  .col-50
+    width: 100%
+  .section
+    &-title
+      &__text
+        font-size: 1.28rem
+        line-height: 2.07rem
+        max-width: 55rem
+      &__word
+        display: block
+        &:after
+          display: none
+      &__heading
+        display: ruby
+      &--left
+        text-align: center
 @media screen and (max-width: 576px)
   .section
     &__title
       &__description
         max-width: 21.86rem
+    &-title
+      &__text
+        font-size: 1.28rem
+        line-height: 2.07rem
   .contacts
     &__phone
       margin-right: 0
@@ -44,6 +77,7 @@
   .title
     font-size: 1.64rem
   .hero
+    height: 65vh
     &__scroll-down
       display: none
     &__content
@@ -55,6 +89,13 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
+@media screen and (max-width: 376px)
+  .section
+    &-title
+      &__text
+        max-width: 27rem
+      &__heading
+        display: block
 @media screen and (max-height: 31rem)
   .hero
     &__scroll-down
