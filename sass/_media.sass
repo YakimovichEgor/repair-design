@@ -67,6 +67,33 @@
       &__text
         font-size: 1.28rem
         line-height: 2.07rem
+  .control
+    background-color: $dark
+    color: $light
+    &__video
+      background-size: cover
+      max-width: 39rem
+      min-height: 21rem
+      margin-bottom: 2rem
+      &__play
+        max-width: 6rem
+    &__form
+      display: block
+    &__input
+      margin-bottom: 4.5rem
+      margin-top: -1rem
+      &--dark
+        &::placeholder
+          color: $light
+    &__policy-label
+      margin-top: -1rem
+      justify-content: flex-start
+    &__button
+      display: block
+      margin: auto
+      width: 98%
+      margin-bottom: -9.5rem
+
   .contacts
     &__phone
       margin-right: 0
@@ -96,6 +123,21 @@
         max-width: 27rem
       &__heading
         display: block
+  .control
+    &__text
+      font-size: 1rem
+      line-height: 169%
+      margin-bottom: 1.285rem
+      max-width: 25rem
+      &::before
+        margin-bottom: 1.5rem
+    &__video
+      background-size: cover
+      max-width: 25rem
+      min-height: 14.7rem
+      margin-bottom: 2rem
+      &__play
+        max-width: 6rem
 @media screen and (max-height: 31rem)
   .hero
     &__scroll-down

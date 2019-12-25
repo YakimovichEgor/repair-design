@@ -349,8 +349,10 @@ template {
   font-size: 1.285rem;
   color: #fff;
   padding: 0.5rem 0; }
-  .input::placeholder {
+  .input--light::placeholder {
     color: #fff; }
+  .input--dark::placeholder {
+    color: #131313; }
 
 .policy__checkbox {
   opacity: 0;
@@ -409,6 +411,8 @@ img {
     padding-top: 1rem; }
   .section-title {
     text-align: center; }
+    .section-title--light {
+      color: #fff; }
     .section-title--left {
       text-align: left; }
     .section-title__heading {
@@ -575,6 +579,9 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.projects {
+  padding-bottom: 30rem; }
+
 .swiper-slide {
   display: flex;
   flex-wrap: wrap;
@@ -617,6 +624,74 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -1px; }
+
+.control__section-title {
+  margin-bottom: 2.214rem;
+  margin-top: -30rem; }
+
+.control__video {
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-bottom: 4.428rem;
+  max-width: 58.357rem;
+  min-height: 31rem;
+  background: #131313 url("../img/video-mask.jpg") center no-repeat;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15); }
+  .control__video::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.8); }
+
+.control__text {
+  max-width: 40.785rem;
+  margin: auto;
+  margin-bottom: 4.285rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.42rem; }
+  .control__text::before {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    width: 55px;
+    height: 2px;
+    border-radius: 30px;
+    background-color: #E3B873; }
+
+.control__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto; }
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.control__label {
+  margin-bottom: -7px; }
+
+.control__input {
+  font-size: 1.285rem; }
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem; }
+  .control__policy-label {
+    justify-content: center; }
+
+.control__button {
+  padding: 1.286rem 4.785rem; }
+
+.video__play {
+  position: relative;
+  margin: auto; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -778,6 +853,31 @@ img {
   .section-title__text {
     font-size: 1.28rem;
     line-height: 2.07rem; }
+  .control {
+    background-color: #131313;
+    color: #fff; }
+    .control__video {
+      background-size: cover;
+      max-width: 39rem;
+      min-height: 21rem;
+      margin-bottom: 2rem; }
+      .control__video__play {
+        max-width: 6rem; }
+    .control__form {
+      display: block; }
+    .control__input {
+      margin-bottom: 4.5rem;
+      margin-top: -1rem; }
+      .control__input--dark::placeholder {
+        color: #fff; }
+    .control__policy-label {
+      margin-top: -1rem;
+      justify-content: flex-start; }
+    .control__button {
+      display: block;
+      margin: auto;
+      width: 98%;
+      margin-bottom: -9.5rem; }
   .contacts__phone {
     margin-right: 0;
     color: #fff;
@@ -804,7 +904,21 @@ img {
   .section-title__text {
     max-width: 27rem; }
   .section-title__heading {
-    display: block; } }
+    display: block; }
+  .control__text {
+    font-size: 1rem;
+    line-height: 169%;
+    margin-bottom: 1.285rem;
+    max-width: 25rem; }
+    .control__text::before {
+      margin-bottom: 1.5rem; }
+  .control__video {
+    background-size: cover;
+    max-width: 25rem;
+    min-height: 14.7rem;
+    margin-bottom: 2rem; }
+    .control__video__play {
+      max-width: 6rem; } }
 
 @media screen and (max-height: 31rem) {
   .hero__scroll-down {
