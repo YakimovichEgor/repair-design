@@ -53,7 +53,8 @@ $(document).ready(function () {
             // строчное правило
             userName: {
                 required: true,
-                minlength: 2
+                minlength: 2,
+                maxlength: 15
             },
             userPhone: "required",
             // правило-объект(блок)
@@ -65,7 +66,8 @@ $(document).ready(function () {
         messages: {
             userName: {
                 required: "Имя обязательно",
-                minlength: "Имя не короче 2х букв"
+                minlength: "Имя не короче 2х букв",
+                maxlength: "Имя не больше 15ти букв"
             },
             userPhone: "Телефон обязателен",
             userEmail: {
@@ -77,4 +79,57 @@ $(document).ready(function () {
     // Маска для номера телефона
 
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) __-__-___"});
+
+    // Валидация footer'a
+    $('.footer__form').validate({
+        errorClass: "invalid",
+        rules: {
+            footer_userName: {
+                required: true,
+                minlength: 2,
+                maxlength: 15
+            },
+            footer_userPhone: {
+                required: true,
+            },
+            footer_userQuestion: "required"
+        },
+        messages: {
+            footer_userName: {
+                required: "Имя обязательно",
+                minlength: "Имя не короче 2х букв",
+                maxlength: "Имя не больше 15ти букв"
+            },
+            footer_userPhone: {
+                required: "Телефон обязателен",
+            },
+            footer_userQuestion: "Вопрос обязателен"
+        },
+    });
+
+    // Валидация control'a
+    $('.control__form').validate({
+        errorClass: "invalid",
+        rules: {
+            control_userName: {
+                required: true,
+                minlength: 2,
+                maxlength: 15
+            },
+            control_userPhone: {
+                required: true,
+            },
+        },
+        messages: {
+            control_userName: {
+                required: "Имя обязательно",
+                minlength: "Имя не короче 2х букв",
+                maxlength: "Имя не больше 15ти букв"
+            },
+            control_userPhone: {
+                required: "Телефон обязателен",
+            },
+
+        }
+    });
 });
