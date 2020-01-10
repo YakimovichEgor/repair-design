@@ -794,7 +794,25 @@ img {
     background-color: #131313;
     padding: 4.285rem 0; }
   .footer__map {
-    margin-bottom: 4.67rem; }
+    margin-bottom: 4.67rem;
+    /**/ }
+  .footer__section {
+    position: relative; }
+    .footer__section-title__heading {
+      color: #E3B873;
+      text-transform: uppercase;
+      font-family: 'Yeseva One', cursive;
+      text-align: center;
+      max-width: 33rem;
+      margin: auto;
+      margin-bottom: 2rem;
+      font-weight: normal;
+      font-size: 1.428rem;
+      line-height: 1.6rem; }
+    .footer__section-title__image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem; }
 
 .modal {
   opacity: 0;
