@@ -981,3 +981,9 @@ img {
 @media screen and (max-height: 31rem) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 567px) {
+  .control__input {
+    margin-bottom: 0rem; }
+  .control__input-group {
+    margin-bottom: 4.5rem; } }
