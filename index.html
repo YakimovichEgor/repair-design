@@ -199,7 +199,7 @@
             <p class="control__text wow fadeInLeft" data-wow-delay="0.7s">
                 На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
             </p>
-            <form action="#" class="form control__form wow fadeInRight" data-wow-delay="0.7s">
+            <form action="send_control.php" method="POST" class="form control__form wow fadeInRight" data-wow-delay="0.7s">
                 <div class="control__input-group">
                     <label for="user-name" class="label form__label control__label control__label--name">Имя</label>
                     <input type="text" name="control_userName" class="input form__input control__input input--dark" id="user-name" placeholder="Как вас зовут:">
@@ -452,7 +452,7 @@
     <div class="container">
         <div class="footer__wrap">
             <h3 class="footer__title">Остались вопросы?</h3>
-            <form action="" class="form footer__form">
+            <form action="send_footer.php" method="POST" class="form footer__form">
                 <div class="input-group footer__input-group">
                     <label for="user-name" class="label form__label label--light">Имя</label>
                     <input type="text" name="footer_userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
@@ -525,7 +525,7 @@
         <button class="modal__close"></button>
         <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
         <!-- /.modal__title -->
-        <form action="" class="form modal__form">
+        <form action="send_modal.php" method="POST" class="form modal__form">
             <div class="input-group modal__input-group">
                 <label for="user-name" class="label form__label label--light">Имя</label>
                 <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
