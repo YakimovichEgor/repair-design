@@ -74,6 +74,21 @@ $(document).ready(function () {
                 required: "Обязательно укажите email",
                 email: "Введите в формате: name@domain.com"
             }
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: "POST",
+            url: "../send_modal.php",
+            data: $(form).serialize(),
+            success: function(response) {
+              alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
+              $(form)[0].reset();
+              modal.toggleClass('modal--visible');
+            },
+            error: function (response) {
+                console.error('ошибка запроса ' + response);
+            }
+          });
         }
     });
     // Маска для номера телефона
@@ -105,6 +120,20 @@ $(document).ready(function () {
             },
             footer_userQuestion: "Вопрос обязателен"
         },
+        submitHandler: function(form) {
+          $.ajax({
+            type: "POST",
+            url: "../send_footer.php",
+            data: $(form).serialize(),
+            success: function(response) {
+              alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
+              $(form)[0].reset();
+            },
+            error: function (response) {
+                console.error('ошибка запроса ' + response);
+            }
+          });
+        }
     });
 
     // Валидация control'a
@@ -127,9 +156,23 @@ $(document).ready(function () {
                 maxlength: "Имя не больше 15ти букв"
             },
             control_userPhone: {
-                required: "Телефон обязателен",
+                required: "Телефон обязателен"
             },
 
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: "POST",
+            url: "../send_control.php",
+            data: $(form).serialize(),
+            success: function(response) {
+              alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
+              $(form)[0].reset();
+            },
+            error: function (response) {
+                console.error('ошибка запроса ' + response);
+            }
+          });
         }
     });
 });
