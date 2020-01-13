@@ -76,19 +76,37 @@ $(document).ready(function () {
             }
         },
         submitHandler: function(form) {
-          $.ajax({
-            type: "POST",
-            url: "../send_modal.php",
-            data: $(form).serialize(),
-            success: function(response) {
-              alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
-              $(form)[0].reset();
-              modal.toggleClass('modal--visible');
-            },
-            error: function (response) {
-                console.error('ошибка запроса ' + response);
-            }
-          });
+        //   $.ajax({
+        //     type: "POST",
+        //     url: "../send.php",
+        //     data: $(form).serialize(),
+        //     success: function(response) {
+        //       alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
+        //       $(form)[0].reset();
+        //       modal.removeClass('modal--visible');
+        //     },
+        //     error: function (response) {
+        //         console.error('ошибка запроса ' + response);
+        //     }
+        //   });
+        // }
+            $.ajax({
+                url: form.action,
+                type: form.method,
+                data: $(form).serialize(),
+                success: function (response) {
+                    alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
+                    console.log("Прибыли данные: " + response);
+                    $('Форма отправлена').text(response);
+                    $(form)[0].reset();
+                    modal.removeClass('modal--visible');
+                },
+                error: function (response) {
+                    console.error(response);
+                    $('ошибка запроса').text(response);
+                    $(form)[0].reset();
+                }
+            });
         }
     });
     // Маска для номера телефона
@@ -121,16 +139,20 @@ $(document).ready(function () {
             footer_userQuestion: "Вопрос обязателен"
         },
         submitHandler: function(form) {
-          $.ajax({
-            type: "POST",
-            url: "../send_footer.php",
-            data: $(form).serialize(),
-            success: function(response) {
-              alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
-              $(form)[0].reset();
-            },
-            error: function (response) {
-                console.error('ошибка запроса ' + response);
+            $.ajax({
+                url: form.action,
+                type: form.method,
+                data: $(form).serialize(),
+                success: function (response) {
+                    alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
+                    console.log("Прибыли данные: " + response);
+                    $('Форма отправлена').text(response);
+                    $(form)[0].reset();
+                },
+                error: function (response) {
+                    console.error(response);
+                    $('ошибка запроса').text(response);
+                    $(form)[0].reset();
             }
           });
         }
@@ -161,16 +183,21 @@ $(document).ready(function () {
 
         },
         submitHandler: function(form) {
-          $.ajax({
-            type: "POST",
-            url: "../send_control.php",
-            data: $(form).serialize(),
-            success: function(response) {
-              alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
-              $(form)[0].reset();
-            },
-            error: function (response) {
-                console.error('ошибка запроса ' + response);
+            $.ajax({
+                url: form.action,
+                type: form.method,
+                data: $(form).serialize(),
+                success: function (response) {
+                    alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
+                    console.log("Прибыли данные: " + response);
+                    $('Форма отправлена').text(response);
+                    $(form)[0].reset();
+                    modal.removeClass('modal--visible');
+                },
+                error: function (response) {
+                    console.error(response);
+                    $('ошибка запроса').text(response);
+                    $(form)[0].reset();
             }
           });
         }
